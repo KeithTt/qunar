@@ -28,54 +28,54 @@ yarn run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### 识别路径别名符号
-See [Path Alias Symbol](https://juejin.im/post/5c9477ad6fb9a070ce31b050)
+### 路径别名
+- https://juejin.im/post/5c9477ad6fb9a070ce31b050
 
-### 安装reset.css
-https://www.npmjs.com/package/reset-css
+### reset.css
+- https://www.npmjs.com/package/reset-css
 
-### 安装border.css（解决移动端一像素边框问题）
-https://www.npmjs.com/package/border.css
+### border.css（解决移动端一像素边框问题）
+- https://www.npmjs.com/package/border.css
 
-### 安装fastclick，解决移动端300ms点击延时问题
-https://www.npmjs.com/package/fastclick
+### fastclick，解决移动端300ms点击延时问题
+- https://www.npmjs.com/package/fastclick
 ```
 yarn add fastclick
 ```
 
 ### 注册iconfont
-https://www.iconfont.cn/
+- https://www.iconfont.cn/
 
-### 安装stylus
+### stylus
 https://www.npmjs.com/package/stylus
 ```
 yarn add stylus stylus-loader
 ```
 
 ### px,rem,em区别
-https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
-https://www.runoob.com/w3cnote/px-em-rem-different.html
+- https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+- https://www.runoob.com/w3cnote/px-em-rem-different.html
 
 ### css文档
-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 
 ### 轮播组件
-https://github.com/surmon-china/vue-awesome-swiper
+- https://github.com/surmon-china/vue-awesome-swiper
 
 ### pugjs
-https://pugjs.org/
-https://html2jade.org/
+- https://pugjs.org/
+- https://html2jade.org/
 
 ### moment.js
-http://momentjs.cn/
+- http://momentjs.cn/
 
-### 静态资源目录
-https://segmentfault.com/a/1190000014456796
+### vue-cli 3.0 静态资源目录
+- https://segmentfault.com/a/1190000014456796
 
 ### webpack
-https://webpack.docschina.org/configuration/dev-server/#devserver-proxy
-https://segmentfault.com/a/1190000014456796
-https://juejin.im/post/5bd02f98e51d457a944b634f
+- https://webpack.docschina.org/configuration/dev-server/#devserver-proxy
+- https://segmentfault.com/a/1190000014456796
+- https://juejin.im/post/5bd02f98e51d457a944b634f
 
 ### better-scroll
-https://github.com/ustbhuangyi/better-scroll
+- https://github.com/ustbhuangyi/better-scroll
