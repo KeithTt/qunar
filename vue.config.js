@@ -30,13 +30,13 @@ module.exports = {
     // } else {
     //   // 为开发环境修改配置...
     // }
+    // config.plugins = [new BundleAnalyzerPlugin()];
     config.resolve = {
-      // plugins: [new BundleAnalyzerPlugin()],
       extensions: ['.js', '.vue', '.json', ".css"],
       alias: {
         '@': resolve('src'),
         'styles': resolve('src/assets/styles'),
-        'common': resolve('src/common')
+        'common': resolve('src/common'),
       },
     }
   },
