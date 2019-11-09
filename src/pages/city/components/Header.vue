@@ -24,6 +24,7 @@
     color: #ffffff
     background: $bgColor
     font-size: .32rem
+
     .header-back
       position: absolute
       top: 0

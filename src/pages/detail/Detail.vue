@@ -21,7 +21,7 @@
       DetailHeader,
       DetailBanner
     },
-    data () {
+    data() {
       return {
         sightName: '',
         bannerImg: '',
@@ -30,7 +30,7 @@
       }
     },
     methods: {
-      getDetailInfo () {
+      getDetailInfo() {
         axios.get('/api/detail.json', {
           params: {
             id: this.$route.params.id
@@ -39,7 +39,7 @@
           this.handleGetDataSucc
         )
       },
-      handleGetDataSucc (res) {
+      handleGetDataSucc(res) {
         res = res.data;
         if (res.ret && res.data) {
           this.sightName = res.data.sightName;

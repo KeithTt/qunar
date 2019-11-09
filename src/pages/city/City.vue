@@ -22,7 +22,7 @@
       CityList,
       CityAlphabet,
     },
-    data () {
+    data() {
       return {
         hotCities: [],
         cities: {},
@@ -30,24 +30,24 @@
       }
     },
     methods: {
-      getCityInfo () {
+      getCityInfo() {
         axios.get('/api/city.json').then(
           this.handleGetCityInfoSucc
         )
       },
-      handleGetCityInfoSucc (res) {
+      handleGetCityInfoSucc(res) {
         res = res.data;
         if (res.ret && res.data) {
           this.hotCities = res.data.hotCities;
           this.cities = res.data.cities;
         }
       },
-      handleLetterChange (letter) {
+      handleLetterChange(letter) {
         // console.log(letter)
         this.letter = letter;
       }
     },
-    mounted () {
+    mounted() {
       this.getCityInfo();
     }
   }

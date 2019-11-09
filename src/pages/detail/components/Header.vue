@@ -15,7 +15,7 @@
 <script>
   export default {
     name: "DetailHeader",
-    data () {
+    data() {
       return {
         showAbs: true,
         opacityStyle: {
@@ -24,11 +24,11 @@
       }
     },
     methods: {
-      handleScroll () {
+      handleScroll() {
         // console.log(document.documentElement.scrollTop)
         const top = document.documentElement.scrollTop;
         if (top > 50) {
-          let opacity = top/140;
+          let opacity = top / 140;
           opacity = opacity > 1 ? 1 : opacity;
           this.opacityStyle = {
             opacity
@@ -62,9 +62,11 @@
     border-radius .4rem
     text-align center
     background gray
+
     .header-abs-back
       color white
       font-size .4rem
+
   .header-fixed
     z-index: 2
     position: fixed
@@ -77,6 +79,7 @@
     color: #fff
     background: $bgColor
     font-size: .32rem
+
     .header-fixed-back
       position: absolute
       top: 0

@@ -28,6 +28,7 @@
     line-height .8rem
     font-size .32rem
     padding 0 .2rem
+
     .item-title-icon
       position relative
       left .06rem
@@ -38,6 +39,7 @@
       margin-right .1rem
       background url(http://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat
       background-size .4rem 3rem
+
   .item-children
     padding 0 .2rem
 </style>

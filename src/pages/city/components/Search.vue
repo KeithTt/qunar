@@ -7,7 +7,9 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
+        <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">
+          {{item.name}}
+        </li>
         <li class="search-item border-bottom" v-show="!list.length">没有找到匹配数据</li>
       </ul>
     </div>
@@ -25,7 +27,7 @@
         type: Object
       }
     },
-    data () {
+    data() {
       return {
         keyword: '',
         list: [],
@@ -33,7 +35,7 @@
       }
     },
     methods: {
-      handleCityClick (city) {
+      handleCityClick(city) {
         // this.$store.dispatch('changeCity', city);
         // this.$store.commit('changeCity', city);
         this.changeCity(city);
@@ -42,7 +44,7 @@
       ...mapMutations(['changeCity'])
     },
     watch: {
-      keyword () {
+      keyword() {
         if (this.timer) {
           clearTimeout(this.timer)
         }
@@ -63,7 +65,7 @@
         }, 100)
       }
     },
-    mounted () {
+    mounted() {
       this.scroll = new Bscroll(this.$refs.search);
     }
   }
@@ -75,6 +77,7 @@
     height: .72rem
     padding: 0 0.1rem
     background: $bgColor
+
     .search-input
       box-sizing: border-box
       padding: 0 .1rem
@@ -84,6 +87,7 @@
       text-align: center
       border-radius: .06rem
       color: #666
+
   .search-content
     z-index 1
     overflow hidden
@@ -93,6 +97,7 @@
     right: 0
     bottom: 0
     background #eee
+
     .search-item
       padding-left .2rem
       color #666

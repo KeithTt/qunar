@@ -4,7 +4,7 @@
       <swiper :options="swiperOption">
         <!-- slides -->
         <swiper-slide v-for="(item, index) of images" :key="index">
-          <img class="gallery-img" :src="item"  alt=""/>
+          <img class="gallery-img" :src="item" alt=""/>
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -20,7 +20,7 @@
         type: Array
       }
     },
-    data () {
+    data() {
       return {
         swiperOption: {
           pagination: ".swiper-pagination",
@@ -31,7 +31,7 @@
       }
     },
     methods: {
-      handleGalleryClick () {
+      handleGalleryClick() {
         this.$emit('close')
       }
     }
@@ -41,6 +41,7 @@
 <style lang="stylus" scoped>
   .container >>> .swiper-container
     overflow inherit
+
   .container
     display flex
     flex-direction column
@@ -52,13 +53,16 @@
     top: 0
     bottom 0
     background black
+
     .wrapper
       position relative
       width 100%
       height 0
       padding-bottom 100%
+
       .gallery-img
         width 100%
+
       .swiper-pagination
         color white
         bottom .1rem

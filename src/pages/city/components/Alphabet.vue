@@ -9,7 +9,8 @@
       @touchstart.prevent="handleTouchStart"
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
-    >{{item}}</li>
+    >{{item}}
+    </li>
   </ul>
 </template>
 
@@ -22,29 +23,29 @@
       }
     },
     computed: {
-      letters () {
+      letters() {
         return Object.keys(this.cities);
       }
     },
-    data () {
+    data() {
       return {
         touchStatus: false,
         startY: 0,
         timer: null
       }
     },
-    updated () {
+    updated() {
       this.startY = this.$refs['A'][0].offsetTop;
     },
     methods: {
-      handleLetterClick (event) {
+      handleLetterClick(event) {
         // console.log(event.target.innerText)
         this.$emit('change', event.target.innerText)
       },
-      handleTouchStart () {
+      handleTouchStart() {
         this.touchStatus = true
       },
-      handleTouchMove (event) {
+      handleTouchMove(event) {
         if (this.touchStatus) {
           if (this.timer) {
             clearTimeout(this.timer)
@@ -52,14 +53,14 @@
           this.timer = setTimeout(() => {
             // console.log(startY);
             const touchY = event.touches[0].clientY - 79;
-            const index = Math.floor((touchY - this.startY)/20);
+            const index = Math.floor((touchY - this.startY) / 20);
             if (index >= 0 && index < this.letters.length) {
               this.$emit('change', this.letters[index])
             }
           }, 16)
         }
       },
-      handleTouchEnd () {
+      handleTouchEnd() {
         this.touchStatus = false
       }
     },
@@ -77,6 +78,7 @@
     top 1.58rem
     bottom 0
     width .4rem
+
     .item
       line-height .34rem
       text-align center
