@@ -20,6 +20,10 @@ export default new Router({
       name: 'Detail',
       component: () => import('./pages/detail/Detail')
     },
+    {
+      path: '*',
+      redirect: '/'
+    }
     // {
     //   path: '/about',
     //   name: 'about',
