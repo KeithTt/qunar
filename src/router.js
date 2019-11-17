@@ -8,20 +8,16 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      // component: Home
       component: () => import('@/pages/home/Home')
     },
     {
       path: '/city',
       name: 'City',
-      // component: City
       component: () => import('./pages/city/City')
     },
     {
-      // 动态路由
-      path: '/detail/:id',
+      path: '/detail/:id', // 动态路由
       name: 'Detail',
-      // component: Detail
       component: () => import('./pages/detail/Detail')
     },
     // {

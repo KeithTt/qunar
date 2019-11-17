@@ -2,6 +2,8 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
+      <!--动态路由绑定-->
+      <!--把li标签换成router-link，用tag指定标签类型，动态指定to属性-->
       <router-link tag="li" class="item border-bottom" v-for="item of list" :key="item.id" :to="'/detail/' + item.id">
         <img class="item-img" :src="item.imgUrl" alt=""/>
         <div class="item-info">

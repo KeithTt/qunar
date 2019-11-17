@@ -24,11 +24,12 @@
     data() {
       return {
         swiperOption: {
-          autoplay: false
+          autoplay: false, // 关闭自动滚动
         }
       }
     },
     computed: {
+      // 分页轮播，每8条数据增加一页
       pages() {
         const pages = [];
         this.list.forEach((item, index) => {
@@ -36,22 +37,21 @@
           const page = Math.floor(index / 8);
           // 创建页面数组
           if (!pages[page]) {
-            pages[page] = []
+            pages[page] = [];
           }
           // 将item添加到对应的页面数组里
-          pages[page].push(item)
+          pages[page].push(item);
         });
-        return pages
+        return pages;
       }
     }
   }
 </script>
 
 <style lang="stylus" scoped>
-  /*@import '~@/assets/styles/varibles.styl'*/
-  /*@import '~@/assets/styles/mixins.styl'*/
-  @import '~styles/varibles.styl'
-  @import '~styles/mixins.styl'
+  @import '~styles/varibles.styl';
+  @import '~styles/mixins.styl';
+
   .icons >>> .swiper-container
     height: 0
     padding-bottom: 50%

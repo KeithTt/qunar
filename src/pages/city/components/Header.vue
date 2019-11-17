@@ -1,6 +1,7 @@
 <template>
   <div class="header">
     城市选择
+    <!-- 点击箭头跳转回首页-->
     <router-link to="/">
       <div class="iconfont header-back">&#xe624;</div>
     </router-link>
@@ -15,6 +16,7 @@
 
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
+
   .header
     position: relative
     overflow: hidden

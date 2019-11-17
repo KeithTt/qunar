@@ -62,16 +62,16 @@
     },
     mounted() {
       if (this.$refs.wrapper) {
-        this.scroll = new BScroll(this.$refs.wrapper);
+        this.scroll = new BScroll(this.$refs.wrapper); // 创建一个bscroll实例，通过ref将dom传入。让文档可以滚动
       }
     },
     watch: {
       letter() {
         // console.log(this.letter)
         if (this.letter) {
-          const element = this.$refs[this.letter][0];
+          const element = this.$refs[this.letter][0]; // 获取字母下的第一个元素
           // console.log(element);
-          this.scroll.scrollToElement(element);
+          this.scroll.scrollToElement(element); // 滚动到元素的位置
         }
       }
     }
@@ -79,50 +79,52 @@
 </script>
 
 <style lang="stylus" scoped>
-  @import '~styles/varibles.styl'
+  @import '~styles/varibles.styl';
+
+  /*修改一像素边框的样式*/
   .border-topbottom
     &:before
-      border-color: #ccc
+      border-color #ccc
 
     &:after
-      border-color: #ccc
+      border-color #ccc
 
   .border-bottom
     &:before
-      border-color: #ccc
+      border-color #ccc
 
   .list
-    overflow: hidden
-    position: absolute
-    top: 1.58rem
-    bottom: 0
-    left: 0
-    right: 0
+    overflow hidden
+    position absolute
+    top 1.58rem
+    bottom 0
+    left 0
+    right 0
 
     .title
-      line-height: .54rem
-      background: #eee
-      padding-left: .2rem
-      color: #666
-      font-size: .26rem
+      line-height .54rem
+      background #eee
+      padding-left .2rem
+      color #666
+      font-size .26rem
 
     .button-list
-      overflow: hidden
-      padding: .1rem .6rem .1rem .1rem
+      overflow hidden
+      padding .1rem .6rem .1rem .1rem
 
       .button-wrapper
-        float: left
-        width: 33.33%
+        float left
+        width 33.33%
 
         .button
-          margin: .1rem
-          padding: .1rem 0
-          text-align: center
-          border: .02rem solid #ccc
-          border-radius: .06rem
+          margin .1rem
+          padding .1rem 0
+          text-align center
+          border .02rem solid #ccc
+          border-radius .06rem
 
     .item-list
       .item
-        line-height: .76rem
-        padding-left: .2rem
+        line-height .76rem
+        padding-left .2rem
 </style>

@@ -48,6 +48,7 @@
       }
     },
     mounted() {
+      // 获取数据
       this.getCityInfo();
     }
   }

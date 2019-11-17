@@ -45,6 +45,7 @@
     },
     watch: {
       keyword() {
+        // 函数防抖
         if (this.timer) {
           clearTimeout(this.timer)
         }
@@ -75,7 +76,7 @@
   @import '~styles/varibles.styl'
   .search
     height: .72rem
-    padding: 0 0.1rem
+    padding: 0 .1rem
     background: $bgColor
 
     .search-input

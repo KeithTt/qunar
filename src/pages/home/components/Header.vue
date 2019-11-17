@@ -10,6 +10,7 @@
       输入城市/景点/游玩主题
     </div>
 
+    <!--点击右边容器调跳转到指定路由-->
     <router-link to="/city">
       <div class="header-right">
         <!--{{this.$store.state.city}}-->
