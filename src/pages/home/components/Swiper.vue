@@ -1,9 +1,8 @@
 <template>
   <div class="wrapper">
     <swiper :options="swiperOption" v-if="showSwiper">
-      <!-- slides -->
       <swiper-slide v-for="item of list" :key="item.id">
-        <img class="swiper-img" :src="item.imgUrl"/>
+        <img class="swiper-img" :src="item.imgUrl" alt=""/>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -21,8 +20,8 @@
     data() {
       return {
         swiperOption: {
-          pagination: ".swiper-pagination",
-          loop: true
+          pagination: ".swiper-pagination", // 分页
+          loop: true, // 循环轮播
         }
       }
     },
@@ -35,6 +34,7 @@
 </script>
 
 <style lang="stylus" scoped>
+  /*深度作用选择器，样式穿透*/
   .wrapper >>> .swiper-pagination-bullet-active
     background: #f0f0f0
 
