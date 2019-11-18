@@ -3,6 +3,7 @@
     <city-header></city-header>
     <city-search :cities="cities"></city-search>
     <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
+    <!--.sync修饰符实现双向绑定-->
     <city-alphabet :cities.sync="cities" @change="handleLetterChange"></city-alphabet>
   </div>
 </template>

@@ -1,10 +1,12 @@
 <template>
   <div>
+
     <div class="search">
       <label>
         <input class="search-input" type="text" placeholder="输入城市名或拼音" v-model="keyword"/>
       </label>
     </div>
+
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
         <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">
@@ -13,6 +15,7 @@
         <li class="search-item border-bottom" v-show="!list.length">没有找到匹配数据</li>
       </ul>
     </div>
+
   </div>
 </template>
 
@@ -49,16 +52,16 @@
         if (this.timer) {
           clearTimeout(this.timer)
         }
-        if (!this.keyword) {
+        if (!this.keyword) { // 如果搜索关键字情况则不再创建新的定时器
           this.list = [];
           return;
         }
         this.timer = setTimeout(() => {
           const result = [];
-          for (let i in this.cities) {
+          for (let i in this.cities) { // 搜索逻辑
             this.cities[i].forEach((item) => {
               if (item.spell.indexOf(this.keyword) > -1 || item.name.indexOf(this.keyword) > -1) {
-                result.push(item);
+                result.push(item); // 将搜索结果存入一个数组并返回
               }
             })
           }

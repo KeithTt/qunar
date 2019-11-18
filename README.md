@@ -1,4 +1,4 @@
-# qunaer
+# qunar
 
 ## Project setup
 ```
